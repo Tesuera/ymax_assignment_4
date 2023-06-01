@@ -1,0 +1,23 @@
+{
+  "name": "ymax_php_assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.0",
+    "axios": "^1.4.0",
+    "bootstrap": "^5.2.3",
+    "cropperjs": "^1.5.13",
+    "html2pdf.js": "^0.9.0",
+    "sweetalert2": "^11.7.5"
+  },
+  "devDependencies": {
+    "sass": "^1.62.1"
+  }
+}

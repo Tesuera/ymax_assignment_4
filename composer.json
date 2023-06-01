@@ -1,0 +1,17 @@
+{
+    "name": "moe/ymax_php_assignment",
+    "authors": [
+        {
+            "name": "Tesuera",
+            "email": "zawmmp.1319@gmail.com"
+        }
+    ],
+    "require": {
+        "nesbot/carbon": "^2.66"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lib\\" : "Lib/"
+        }
+    }
+}
