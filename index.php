@@ -88,7 +88,7 @@ use Lib\Tables\AppreciateTable;
                     <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <?= $_SESSION['auth']['username'] ?>
-                        <img class="profile" src="./images/profiles/<?= $_SESSION['auth']['profile'] ?>" alt="">
+                        <img class="profile bg-white" src="./images/profiles/<?= $_SESSION['auth']['profile'] ?>" alt="">
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="./create_blog.php">New post +</a></li>
@@ -96,7 +96,7 @@ use Lib\Tables\AppreciateTable;
                         <li><a class="dropdown-item" href="./favorites.php">Saved blogs</a></li>
                         <li><a class="dropdown-item" href="./change_password.php">Change password</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Log out</a></li>
+                        <li><a class="dropdown-item" href="logout" onclick="event.preventDefault(); logout()">Log out</a></li>
                     </ul>
                     </li>
                 </ul>
@@ -225,6 +225,7 @@ use Lib\Tables\AppreciateTable;
     </div>
 
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
     <script>
 
         let showAppreciatesModal = new bootstrap.Modal(document.querySelector('#showAppreciatesModal'));

@@ -40,7 +40,6 @@ class UsersTable {
         $statement->execute([
             'email' => $data['email']
         ]);
-        $status;
         $user = $statement->fetch();
         if(isset($user->id)) {
             if(password_verify($data['password'], $user->password)) {
@@ -79,7 +78,7 @@ class UsersTable {
 
     public function getUser ($userId) {
         try {
-            $statement = $this->db->prepare("select u.*, COUNT(distinct b.id) as blog_count, COUNT(a.id) as appreciate_count from users u inner join blogs b on u.id=b.user_id inner join appreciates a on b.id=a.blog_id where u.unique_id=:user_id");
+            $statement = $this->db->prepare("select u.*, COUNT(distinct b.id) as blog_count, COUNT(a.id) as appreciate_count from users u left join blogs b on u.id=b.user_id left join appreciates a on b.id=a.blog_id where u.unique_id=:user_id");
             $statement->execute([
                 'user_id' => $userId
             ]);
