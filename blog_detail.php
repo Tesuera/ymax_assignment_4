@@ -511,7 +511,6 @@ use Lib\Tables\AppreciateTable;
             event.preventDefault();
 
             if(blogId != null && blogId != undefined) {
-                console.log(title);
                 document.querySelector('#appreciated_blog_title').textContent = `People who apprecited ${title}`; 
                 document.querySelector('#appreciated_blog_body').innerHTML = `
                 <div class="loader_container">
@@ -874,7 +873,6 @@ use Lib\Tables\AppreciateTable;
                     body: updatedCommentData
                 }).then(res => res.json())
                 .then(data => {
-                    console.log(data);
                     if(data.status == 200) {
                         // class change
                         document.querySelector('#commentEditInput' + commentId).classList.add('d-none');

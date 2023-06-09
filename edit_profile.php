@@ -139,7 +139,6 @@ use Lib\Helpers\Auth;
             var croppedImage = cropper.getCroppedCanvas().toDataURL("image/png");
             profileInputInstead.style.backgroundImage = `url(${croppedImage})`;
             croppedProfileInput.value = croppedImage;
-            console.log(croppedImage);
             previewCropContainer.classList.remove('show');
             cropper.destroy();
             cropper = null;

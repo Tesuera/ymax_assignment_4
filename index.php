@@ -231,7 +231,7 @@ use Lib\Tables\AppreciateTable;
         let showAppreciatesModal = new bootstrap.Modal(document.querySelector('#showAppreciatesModal'));
 
         function goToUserDetail (id) {
-            console.log(id);
+            location.href = "./profile.php?u=" + id;
         }
 
         function seeMore (id) {
@@ -438,8 +438,6 @@ use Lib\Tables\AppreciateTable;
 
         function seeWhoAppreciate (event, blogId, title, currentUserId) {
             event.preventDefault();
-            
-            console.log(currentUserId);
             if(blogId != null && blogId != undefined) {
                 document.querySelector('#appreciated_blog_title').textContent = `People who apprecited ${title}`; 
                 document.querySelector('#appreciated_blog_body').innerHTML = `
